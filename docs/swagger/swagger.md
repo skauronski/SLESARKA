@@ -504,73 +504,66 @@
 
 ### Schemas
 
-#### **product**
+### **product**
 
-```json
-{
-  "type": "object",
-  "required": ["id", "name", "price_with_discount", "group", "char_code"],
-  "properties": {
-    "id": {
-      "type": "integer",
-      "description": "Идентификатор товара",
-      "example": 105
-    },
-    "name": {
-      "type": "string",
-      "description": "Название продукта",
-      "example": "Саморезы"
-    },
-    "price_with_discount": {
-      "type": "number",
-      "format": "decimal",
-      "description": "Цена товара после применения скидки",
-      "example": 1.99
-    },
-    "group": {
-      "type": "string",
-      "description": "Группа товара",
-      "example": "Крепеж"
-    },
-    "char_code": {
-      "type": "string",
-      "description": "Бар-код товара",
-      "example": "SHP0001"
-    }
-  }
-}
-productNew
-json
-Copy
-{
-  "type": "object",
-  "required": ["name", "price_with_discount", "group", "char_code", "count_of_warehouse"],
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "Название продукта",
-      "example": "Шуруповерт"
-    },
-    "price_with_discount": {
-      "type": "number",
-      "format": "decimal",
-      "description": "Цена товара после применения скидки",
-      "example": 1.99
-    },
-    "group": {
-      "type": "string",
-      "description": "Группа товара",
-      "example": "Электро инструмент"
-    },
-    "char_code": {
-      "type": "string",
-      "description": "Бар-код товара",
-      "example": "SHP0001"
-    },
-    "count_of_warehouse": {
-      "type": "integer",
-      "description": "Количество товара на складе",
-      "example": 1000
-    }
-  }
-}
+- **Type**: object
+- **Required**:
+  - `id`
+  - `name`
+  - `price_with_discount`
+  - `group`
+  - `char_code`
+- **Properties**:
+  - **id**:
+    - **Type**: integer
+    - **Description**: Идентификатор товара
+    - **Example**: `105`
+  - **name**:
+    - **Type**: string
+    - **Description**: Название продукта
+    - **Example**: `"Саморезы"`
+  - **price_with_discount**:
+    - **Type**: number
+    - **Format**: decimal
+    - **Description**: Цена товара после применения скидки
+    - **Example**: `1.99`
+  - **group**:
+    - **Type**: string
+    - **Description**: Группа товара
+    - **Example**: `"Крепеж"`
+  - **char_code**:
+    - **Type**: string
+    - **Description**: Бар-код товара
+    - **Example**: `"SHP0001"`
+      
+### **productNew**
+
+- **Type**: object
+- **Required**:
+  - `name`
+  - `price_with_discount`
+  - `group`
+  - `char_code`
+  - `count_of_warehouse`
+- **Properties**:
+  - **name**:
+    - **Type**: string
+    - **Description**: Название продукта
+    - **Example**: `"Шуруповерт"`
+  - **price_with_discount**:
+    - **Type**: number
+    - **Format**: decimal
+    - **Description**: Цена товара после применения скидки
+    - **Example**: `1.99`
+  - **group**:
+    - **Type**: string
+    - **Description**: Группа товара
+    - **Example**: `"Электро инструмент"`
+  - **char_code**:
+    - **Type**: string
+    - **Description**: Бар-код товара
+    - **Example**: `"SHP0001"`
+  - **count_of_warehouse**:
+    - **Type**: integer
+    - **Description**: Количество товара на складе
+    - **Example**: `1000`
